@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { CaruselService } from '../../../components'
 
 import cars from '../../../Json/cars'
+import hotels from '../../../Json/hotels'
 
 const useStyles = makeStyles(() => ({
     wrapperContainer: {
@@ -35,7 +36,7 @@ const ThreeScreen = () => {
         <div className={classes.wrapperContainer}>
             <Container style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
                 <CaruselService data={cars} title="МАШИНЫ" />
-                <CaruselService data={cars} title="ОТЕЛИ" />
+                <CaruselService data={hotels} title="ОТЕЛИ" />
             </Container>
         </div>
     )
