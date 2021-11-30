@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
-import { Box, Typography } from '@material-ui/core'
+import { Box, Typography, CardActionArea } from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -21,10 +21,10 @@ const useStyles = makeStyles(() => ({
 const CardService = (props) => {
     const classes = useStyles()
     return (
-        <Box className={classes.root}>
+        <CardActionArea className={classes.root}>
             <Typography variant="h6">{props.title}</Typography>
             <Typography variant="body1" style={{ marginTop: 10 }}>{props.description}</Typography>
-        </Box>
+        </CardActionArea>
     )
 }
 

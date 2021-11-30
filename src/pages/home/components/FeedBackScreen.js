@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { withStyles } from '@material-ui/core/styles'
-import { Box, Container, TextField, Typography, Button } from '@material-ui/core'
+import { Box, Container, TextField, Typography, Button, FormControlLabel, Checkbox } from '@material-ui/core'
 
 const styles = (theme) => ({
     wrapperContainer: {
@@ -49,7 +49,6 @@ const styles = (theme) => ({
     form: {
         width: '80%',
         display: 'flex',
-        alignItems: 'center',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
             width: '100%'
@@ -57,7 +56,7 @@ const styles = (theme) => ({
     }
 })
 
-const FourScreen = (props) => {
+const FeedBackScreen = (props) => {
     const { classes } = props
     return (
         <Box className={classes.wrapperContainer}>
@@ -73,7 +72,12 @@ const FourScreen = (props) => {
                         <TextField label="Телефон" fullWidth className={classes.input} variant="outlined" />
                         <TextField label="E-mail" fullWidth className={classes.input} variant="outlined" />
                         <TextField label="Комментарий" fullWidth className={classes.input} variant="outlined" />
-                        <Button variant="contained" style={{ backgroundColor: '#424242', color: 'white', height: 60, marginTop: 20 }} fullWidth>Отправить</Button>
+                        <FormControlLabel
+                            control={<Checkbox color="primary" />}
+                            label={'Нажимая на кнопку, я принимаю условия соглашения.'}
+                            style={{ marginTop: 15, marginBottom: 15 }}
+                        />
+                        <Button variant="contained" style={{ backgroundColor: '#424242', color: 'white', height: 60 }} fullWidth>Отправить</Button>
                     </form>
                 </Box>
             </Container>
@@ -81,4 +85,4 @@ const FourScreen = (props) => {
     )
 }
 
-export default withStyles(styles)(FourScreen)
+export default withStyles(styles)(FeedBackScreen)

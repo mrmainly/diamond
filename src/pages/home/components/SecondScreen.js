@@ -26,7 +26,6 @@ const useStyles = makeStyles(() => ({
     Cards: {
         marginTop: 20,
         display: 'flex',
-
     }
 
 }))

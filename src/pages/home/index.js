@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import FirstScreen from './components/FirstScreen'
 import SecondScreen from './components/SecondScreen'
 import ThreeScreen from './components/ThreeScreen'
-import FourScreen from './components/FourScreen'
+import FeedBackScreen from './components/FeedBackScreen'
 
 const useStyles = makeStyles(() => ({
     titleBox: {
@@ -42,7 +42,7 @@ const Home = () => {
                 <Typography variant="body2">СВЯЖИТЕСЬ С НАМИ ОНЛАЙН</Typography>
                 <Typography variant="h5" style={{ fontWeight: 'bold' }}>ФОРМА ОБРАТНОЙ СВЯЗИ</Typography>
             </Box>
-            <FourScreen />
+            <FeedBackScreen />
         </Box>
     )
 }
